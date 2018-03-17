@@ -5,14 +5,16 @@
 
 #### Developing on Windows? No!
 
-With my every body cell bristling these days at the maligned OS, unfortunately I am sometimes forced by on-site work to use Windows.
+Despite my every body cell bristling these days when near the maligned OS, unfortunately I am sometimes forced by on-site work to use Windows.
 
-The following is a quick reference of mostly common snippets to make a Windows workflow somewhat more bearable.
+The following is a quick reference of mostly common snippets to make Windows workflow somewhat more bearable.
 
 
 ## Active Directory
 
-Corporate environments love Active Directory (AD). AD will probably harvest your files from *My Documents* and add to a remote network server.  Which for PC roaming access is probably what you want, or perhaps not?
+Corporate environments love Active Directory (AD).
+
+AD will probably harvest your files from *My Documents* and add them to a remote network server. For PC roaming probably you probably want this, or perhaps not?
 
 If not, move your personal files to e.g. `C:/mydocs`
 
@@ -21,7 +23,7 @@ If not, move your personal files to e.g. `C:/mydocs`
 
 ## Clean Windows
 
-+ CCleaner
++ [CCleaner](https://www.ccleaner.com/ccleaner/download)
 
 + `C:\Users\<username>\AppData\Roaming\`
 
@@ -36,7 +38,7 @@ For a usable terminal window on Windows < 10:
 
         mode con cols=140
 
-change encoding:
+Change encoding:
 
         chcp 650001        Unicode
         chcp 1252          Latin 1
@@ -71,7 +73,7 @@ command | description | |
 `mstsc` | RDP | |
 `net` | network info | |
 `netsh` | netshell | `netsh interface ip set address local dhcp` |
-`netstat` | network stats | `-a` all, `-b` exes, `-o` owner, `-p` TCP, `-r` routing, `-s` stats, `netstat -an | findstr listening` |
+`netstat` | network stats | `-a` all, `-b` exes, `-o` owner, `-p` TCP, `-r` routing, `-s` stats |
 `net use` | network connections | |
 `path` | search path | |
 `ping` | | |
@@ -115,8 +117,6 @@ Just don't use Windows Notepad with one level of undo and no recognition of non-
 
         \\10.0.0.147
 
-in Windows Explorer
-
 
 ## Essential Programs
 
@@ -140,11 +140,11 @@ in Windows Explorer
 For standalone programs, add to `C:/<directory>`, and add this directory to *$PATH*, so the programs are available on the terminal from any location.
 
 
-## File Exchange
+## File Transfer
+
+*(easier way: use local server upload, netcat, network storage, or online storage)*
 
 **the hard way**
-
-*(else use a local server, network storage, or even online storage to transfer)*
 
 ### Win 7
 
