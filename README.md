@@ -14,11 +14,11 @@ The following is a quick reference of mostly common snippets to make Windows wor
 
 Corporate environments love Active Directory (AD).
 
-AD will probably harvest your files from *My Documents* and add them to a remote network server. For PC roaming probably you probably want this, or perhaps not?
+AD will probably harvest your files from *My Documents* and add them to a remote network server. For PC roaming you will want this, else perhaps not?
 
 If not, move your personal files to e.g. `C:/mydocs`
 
--- which will rely on your backup schedule, not AD's (not that I found AD's reliable anyway).
+-- which will then rely on your backup schedule, not AD's (not that I found AD's that frequent anyway).
 
 
 ## Clean Windows
@@ -105,7 +105,7 @@ command | description | |
 
 *not going there ...*
 
-Just don't use Windows Notepad with one level of undo and no recognition of non-CRLF line endings.  (Probably fine on Windows 1.0 in 1985.)
+Just don't use Windows Notepad with one level of undo and no recognition of non-`CRLF` line endings.  (Probably just fine on Windows 1.0 in 1985.)
 
 
 ## Diff Folders
@@ -128,14 +128,14 @@ Just don't use Windows Notepad with one level of undo and no recognition of non-
         + *md5sum*
         + *shred*
 
-+ **7-zip**
-+ **CherryTree**
-+ diff program (**CSDiff**, Winmerge etc)
-+ password vault (**KeepassX**)
-+ PDF viewer (**SumatraPDF**)
++ **[7-Zip](https://www.7-zip.org/)**
++ **[CherryTree](https://www.giuspen.com/cherrytree/)**
++ diff program (**CSDiff**, WinMerge etc)
++ password vault (**[KeepassX](https://www.keepassx.org/downloads)**)
++ PDF viewer (**[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader.html)**)
 + **ptimer**
-+ **PuTTY**
-+ **WinSCP**
++ **[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)**
++ **[WinSCP](https://winscp.net/eng/index.php)**
 
 For standalone programs, add to `C:/<directory>`, and add this directory to *$PATH*, so the programs are available on the terminal from any location.
 
