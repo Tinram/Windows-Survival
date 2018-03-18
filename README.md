@@ -9,8 +9,39 @@ Despite my every body cell bristling these days when near the maligned OS, unfor
 
 The following is a quick reference of mostly common snippets to make Windows workflow somewhat more bearable.
 
+----
 
-## Active Directory
+#### [Active Directory](#ad)
+#### [Clean-up](#cu)
+#### [Command-Line](#cl)
+#### [Commands](#cs)
+#### [/dev/null](#dn)
+#### [Editors](#ed)
+#### [Diff Folders](#df)
+#### [Drive Mapping](#dm)
+#### [Essential Programs](#ep)
+#### [File Transfer](#ft)
+#### [Keys](#ks)
+#### [Hosts](#hs)
+#### [.msc](#mc)
+#### [Passwords](#pw)
+#### [Power Configuration](#pc)
+#### [Program Installation Folders](#pf)
+#### [sendto](#st)
+#### [Servers](#sv)
+#### [Services](#sc)
+#### [Start Batch](#sb)
+#### [Taskbar](#tb)
+#### [Telemetry](#tm)
+#### [Updates](#ud)
+#### [Windows](#wd)
+#### [Windows Explorer](#we)
+
+
+----
+
+
+## Active Directory <a id="ad"></a>
 
 Corporate environments love Active Directory (AD).
 
@@ -21,7 +52,7 @@ If not, move your personal files from *My Documents* to another location, such a
 -- which will then rely on your backup schedule, not AD's (not that I found AD's that frequent or reliable anyway).
 
 
-## Clean
+## Clean-up <a id="cu"></a>
 
 + [CCleaner](https://www.ccleaner.com/ccleaner/download)
 
@@ -32,7 +63,7 @@ If not, move your personal files from *My Documents* to another location, such a
 + `putty -cleanup` (wipe session data)
 
 
-## Command-Line
+## Command-Line <a id="cl"></a>
 
 For a usable terminal window on Windows < 10
 
@@ -57,7 +88,7 @@ Change encoding:
 + default value: `cmd.exe /k "pushd %L"`
 
 
-### Commands
+### Commands <a id="cs"></a>
 
 #### A few network and file commands.
 
@@ -91,7 +122,7 @@ command | description | |
 `xcopy` | | |
 
 
-## /dev/null
+## /dev/null <a id="dn"></a>
 
 **A bitbucket**
 
@@ -104,24 +135,24 @@ command | description | |
         (p) > f 2> nul       out to file, suppress cmd.exe error
 
 
-## Editors
+## Editors <a id="ed"></a>
 
 *Not going there ...*
 
 Just don't use Windows Notepad, which has one level of undo and no recognition of non-`CRLF` line endings.  (Probably just fine on Windows 1.0 in 1985.)
 
 
-## Diff Folders
+## Diff Folders <a id="df"></a>
 
         ROBOCOPY cmp cmp2 /e /l /ns /njs /njh /ndl /fp /log:diff.txt
 
 
-## Drive Mapping
+## Drive Mapping <a id="dm"></a>
 
         \\10.0.0.147
 
 
-## Essential Programs
+## Essential Programs <a id="ep"></a>
 
 + **Git for Windows**
     + not just for *Git*, but for what ships with it:
@@ -143,7 +174,7 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 For standalone programs, add to `C:/<directory>`, and add this directory to *$PATH*, so the programs are available on the terminal from any location.
 
 
-## File Transfer
+## File Transfer <a id="ft"></a>
 
 **The hard way:**
 
@@ -162,7 +193,7 @@ For standalone programs, add to `C:/<directory>`, and add this directory to *$PA
 + Firewall > exceptions > *File and Printer Sharing* > enable
 
 
-## Keys
+## Keys <a id="ks"></a>
 
 ### Windows Key + ...
 
@@ -193,7 +224,7 @@ keys | purpose |
 `Ctrl` + `Shift` + `ESC` | taskmanager |
 
 
-## Hosts
+## Hosts <a id="hs"></a>
 
         C:\windows\system32\drivers\etc\hosts
 
@@ -203,7 +234,7 @@ Create shortcut:
 + `right click` > *Run as administrator*
 
 
-## .msc
+## .msc <a id="mc"></a>
 
 .msc | description |
 ---- | ---- |
@@ -230,12 +261,12 @@ Create shortcut:
 `firewall.cpl` | |
 
 
-## Passwords
+## Passwords <a id="pw"></a>
 
         rundll32.exe keymgr.dll,KRShowKeyMgr
 
 
-## Power Configuration
+## Power Configuration <a id="pc"></a>
 
 `regedit`
 
@@ -244,14 +275,14 @@ Create shortcut:
             3  always on
             4  minimal management
 
-## Program Installation
+## Program Installation Folders <a id="pf"></a>
 
 (theoretical, Windows often doesn't care)
 
         \Program Files (x86)\     x32
         \Program Files\           x64
 
-## sendto
+## sendto <a id="st"></a>
 
      %APPDATA%\Microsoft\Windows\SendTo
 
@@ -260,7 +291,7 @@ or
 `Run` > `shell:sendto`
 
 
-## Servers
+## Servers <a id="sv"></a>
 
 + [WAMP](http://www.wampserver.com/en/)
     + x64, x32, multiple PHP versions
@@ -276,13 +307,13 @@ Kill IIS when it stops WAMP/XAMPP:
 + `services.msc` > *Web Deployment Agent Service* > *manual start*
 
 
-## Services
+## Services <a id="sc"></a>
 
 + DCOM Server Process Launcher - defragging
 + Diagnostics Tracking Service - telemetry
 
 
-## Start Batch
+## Start Batch <a id="sb"></a>
 
 + add program locations to *$PATH*
 
@@ -294,7 +325,7 @@ Kill IIS when it stops WAMP/XAMPP:
         exit
 
 
-## Taskbar
+## Taskbar <a id="tb"></a>
 
 ### Thumbnail Preview Disable
 
@@ -305,7 +336,7 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 *disabled in Creators update ...*
 
-## Telemetry
+## Telemetry <a id="tm"></a>
 
 ### Win 10
 
@@ -325,7 +356,7 @@ new DWORD > ExtendedUIHoverTime > 30000
         reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
 
 
-## Updates
+## Updates <a id="ud"></a>
 
 ### Win 7 Bad Updates
 
@@ -350,7 +381,7 @@ new DWORD > ExtendedUIHoverTime > 30000
 + `services.msc` > start *WindowsUpdate*
 
 
-## Windows
+## Windows <a id="wd"></a>
 
 ### Unreachable Offscreen
 
@@ -361,7 +392,7 @@ new DWORD > ExtendedUIHoverTime > 30000
 + move mouse
 
 
-## Windows Explorer
+## Windows Explorer <a id="we"></a>
 
 ### Kill + Reboot
 
