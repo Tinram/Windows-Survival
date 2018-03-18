@@ -14,14 +14,14 @@ The following is a quick reference of mostly common snippets to make Windows wor
 
 Corporate environments love Active Directory (AD).
 
-AD will probably harvest your files from *My Documents* and add them to a remote network server. For PC roaming you will want this, else perhaps not?
+AD will probably harvest your files from *My Documents* and add them to a remote network server. For PC roaming access you will want this, else you might not.
 
-If not, move your personal files to e.g. `C:/mydocs`
+If not, move your personal files from *My Documents* to another location, such as `C:/mydocs`
 
--- which will then rely on your backup schedule, not AD's (not that I found AD's that frequent anyway).
+-- which will then rely on your backup schedule, not AD's (not that I found AD's that frequent or reliable anyway).
 
 
-## Clean Windows
+## Clean
 
 + [CCleaner](https://www.ccleaner.com/ccleaner/download)
 
@@ -32,9 +32,9 @@ If not, move your personal files to e.g. `C:/mydocs`
 + `putty -cleanup` (wipe session data)
 
 
-## Command-line
+## Command-Line
 
-For a usable terminal window on Windows < 10:
+For a usable terminal window on Windows < 10
 
         mode con cols=140
 
@@ -45,10 +45,11 @@ Change encoding:
 
 #### Open in current folder:
 
-+ current directory (nothing selected) > `Shift` + right click > *Open command window here*
++ current directory (nothing selected) > `Shift` + `right click` > *Open command window here*
 
 #### Registry hack:
 
++ `regedit`
 + `HKEY_LOCAL_MACHINE\Software\Classes\Folder\Shell\`
 + create new key called `Command Prompt`
 + default value: `cmd`
@@ -58,7 +59,7 @@ Change encoding:
 
 ### Commands
 
-#### a few network and file commands
+#### A few network and file commands.
 
 command | description | |
 ---- | ---- | ---- |
@@ -92,20 +93,22 @@ command | description | |
 
 ## /dev/null
 
-*bitbucket* with *p* = program:
+**A bitbucket**
+
+*p* = program
 
         p > nul
-        p 2> nul             err to nul
-        p > nul 2>&1         err + out
-        p >f 2> nul          out to file, suppress err
-        (p) > f 2> nul       out to file, suppress cmd.exe err
+        p 2> nul             error to nul
+        p > nul 2>&1         error + out
+        p >f 2> nul          out to file, suppress error
+        (p) > f 2> nul       out to file, suppress cmd.exe error
 
 
 ## Editors
 
-*not going there ...*
+*Not going there ...*
 
-Just don't use Windows Notepad with one level of undo and no recognition of non-`CRLF` line endings.  (Probably just fine on Windows 1.0 in 1985.)
+Just don't use Windows Notepad, which has one level of undo and no recognition of non-`CRLF` line endings.  (Probably just fine on Windows 1.0 in 1985.)
 
 
 ## Diff Folders
@@ -142,9 +145,9 @@ For standalone programs, add to `C:/<directory>`, and add this directory to *$PA
 
 ## File Transfer
 
-*(easier way: use local server upload, netcat, network storage, or online storage)*
+**The hard way:**
 
-**the hard way**
+*(easier way: use local server upload, netcat, network storage, or online storage)*
 
 ### Win 7
 
@@ -155,13 +158,13 @@ For standalone programs, add to `C:/<directory>`, and add this directory to *$PA
 
 ### Win XP
 
-+ `services.msc` > required: *Server*, *Computer Browser*
++ `services.msc` > *Server*, *Computer Browser* (required)
 + Firewall > exceptions > *File and Printer Sharing* > enable
 
 
 ## Keys
 
-### Windows Key +
+### Windows Key + ...
 
 keys | purpose |
 ---- | ---- |
@@ -177,7 +180,7 @@ keys | purpose |
 `Shift` + `L-Alt` + `PrtScrn` | high contrast |
 
 
-### others
+### Others
 
 keys | purpose |
 ---- | ---- |
@@ -194,10 +197,10 @@ keys | purpose |
 
         C:\windows\system32\drivers\etc\hosts
 
-create shortcut:
+Create shortcut:
 
 + `notepad /A <path>`
-+ open as administrator
++ `right click` > *Run as administrator*
 
 
 ## .msc
@@ -234,18 +237,19 @@ create shortcut:
 
 ## Power Configuration
 
-        HKEY_CURRENT_USER\Control Panel\PowerCfg
-    CurrentPowerPolicy
-        0   home office
-        3   always on
-        4   minimal mgt
+`regedit`
+
+        HKEY_CURRENT_USER\Control Panel\PowerCfg > CurrentPowerPolicy
+            0  home office
+            3  always on
+            4  minimal management
 
 ## Program Installation
 
 (theoretical, Windows often doesn't care)
 
-        \Program Files x86\     x32
-        \Program Files\         x64
+        \Program Files (x86)\     x32
+        \Program Files\           x64
 
 ## sendto
 
@@ -269,7 +273,7 @@ or
 Kill IIS when it stops WAMP/XAMPP:
 
 + Control Panel > Admin Tools > IIS Manager > stop
-+ `services.msc` > *Web Deployment Agent Service* > manual start
++ `services.msc` > *Web Deployment Agent Service* > *manual start*
 
 
 ## Services
@@ -299,7 +303,7 @@ Kill IIS when it stops WAMP/XAMPP:
 + `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` >
 new DWORD > ExtendedUIHoverTime > 30000
 
-*disabled in Creators update*
+*disabled in Creators update ...*
 
 ## Telemetry
 
@@ -348,11 +352,11 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 ## Windows
 
-### Gone Offscreen
+### Unreachable Offscreen
 
-+ right click window on taskbar, or select it and use `Alt + Space`
-+ if `Restore'` option available, select it to pop window out of minimised/maximised state
-+ `Move` option
++ `right click` window on taskbar, or select it and use `Alt` + `Space`
++ if `Restore` option available, select it to pop window out of minimised/maximised state
++ `Move`
 + cursor
 + move mouse
 
