@@ -167,7 +167,7 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 + diff program (**CSDiff**, WinMerge etc)
 + password vault (**[KeepassX](https://www.keepassx.org/downloads)**)
 + PDF viewer (**[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader.html)**)
-+ **ptimer**
++ **[ptime](http://pc-tools.net/win32/ptime/)**
 + **[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)**
 + **[WinSCP](https://winscp.net/eng/index.php)**
 
