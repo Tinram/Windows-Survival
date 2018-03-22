@@ -5,9 +5,9 @@
 
 #### Developing on Windows? No!
 
-Despite my every body cell bristling these days when near the maligned OS, unfortunately I am sometimes forced by on-site work to use Windows.
+Despite every body cell screaming when in the vicinity of the maligned OS these days, unfortunately I am sometimes forced by on-site work to use Windows.
 
-The following is a quick reference of mostly common snippets to make Windows workflow somewhat more bearable.
+The following is a quick reference of mostly common tips to make Windows usage somewhat more bearable.
 
 ----
 
@@ -41,29 +41,34 @@ The following is a quick reference of mostly common snippets to make Windows wor
 ----
 
 
-## Active Directory <a id="ad"></a>
+<a id="ad"></a>
+## Active Directory
 
-Corporate environments love Active Directory (AD).
+Corporate environments love Active Directory (AD).  I don't.
 
-AD will probably harvest your files from *My Documents* and add them to a remote network server. For PC roaming access you will want this, else you might not.
+AD will probably silently harvest your files from *My Documents* and add them to some remote network server(s).
 
-If not, move your personal files from *My Documents* to another location, such as `C:/mydocs`
+For corporate PC roaming access you will probably want this, else you might not.
 
--- which will then rely on your backup schedule, not AD's (not that I found AD's that frequent or reliable anyway).
+If not, move your personal files out of *My Documents* to another location, such as `C:/mydocs`
+
+-- which will then rely on your backup schedule, not AD's (not that I found AD's that consistent anyway).
 
 
-## Clean-up <a id="cu"></a>
+<a id="cu"></a>
+## Clean-up
 
 + [CCleaner](https://www.ccleaner.com/ccleaner/download)
 
 + `C:\Users\<username>\AppData\Roaming\`
 
-+ `C:\Users\<pc_name>\AppData\Roaming\Skype\<skype_name>\xxxx-journal`
++ `C:\Users\<username>\AppData\Roaming\Skype\<skype_name>\xxxx-journal`
 
 + `putty -cleanup` (wipe session data)
 
 
-## Command-Line <a id="cl"></a>
+<a id="cl"></a>
+## Command-Line
 
 For a usable terminal window on Windows < 10
 
@@ -74,13 +79,13 @@ Change encoding:
         chcp 650001        Unicode
         chcp 1252          Latin 1
 
-#### Open in current folder:
+#### Open terminal in current folder:
 
 + current directory (nothing selected) > `Shift` + `right click` > *Open command window here*
 
 #### Registry hack:
 
-+ `regedit`
++ *Run* > `regedit`
 + `HKEY_LOCAL_MACHINE\Software\Classes\Folder\Shell\`
 + create new key called `Command Prompt`
 + default value: `cmd`
@@ -88,7 +93,8 @@ Change encoding:
 + default value: `cmd.exe /k "pushd %L"`
 
 
-### Commands <a id="cs"></a>
+<a id="cs"></a>
+### Commands
 
 #### A few network and file commands.
 
@@ -122,7 +128,8 @@ command | description | |
 `xcopy` | | |
 
 
-## /dev/null <a id="dn"></a>
+<a id="dn"></a>
+## /dev/null
 
 **A bitbucket**
 
@@ -135,26 +142,30 @@ command | description | |
         (p) > f 2> nul       out to file, suppress cmd.exe error
 
 
-## Editors <a id="ed"></a>
+<a id="ed"></a>
+## Editors
 
 *Not going there ...*
 
 Just don't use Windows Notepad, which has one level of undo and no recognition of non-`CRLF` line endings.  (Probably just fine on Windows 1.0 in 1985.)
 
 
-## Diff Folders <a id="df"></a>
+<a id="df"></a>
+## Diff Folders
 
         ROBOCOPY cmp cmp2 /e /l /ns /njs /njh /ndl /fp /log:diff.txt
 
 
-## Drive Mapping <a id="dm"></a>
+<a id="dm"></a>
+## Drive Mapping
 
         \\10.0.0.147
 
 
-## Essential Programs <a id="ep"></a>
+<a id="ep"></a>
+## Essential Programs
 
-+ **Git for Windows**
++ **[Git](https://git-scm.com/download/win)**
     + not just for *Git*, but for what ships with it:
         + *curl*
         + *grep*
@@ -171,10 +182,13 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 + **[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)**
 + **[WinSCP](https://winscp.net/eng/index.php)**
 
-For standalone programs, add to `C:/<directory>`, and add this directory to *$PATH*, so the programs are available on the terminal from any location.
+### Standalone Programs
+
+Add standalone programs to `C:/<directory>`, and add this directory location to *$PATH*, so the programs are available on the command-line from any location.
 
 
-## File Transfer <a id="ft"></a>
+<a id="ft"></a>
+## File Transfer
 
 **The hard way:**
 
@@ -189,11 +203,12 @@ For standalone programs, add to `C:/<directory>`, and add this directory to *$PA
 
 ### Win XP
 
-+ `services.msc` > *Server*, *Computer Browser* (required)
++ *Run* > `services.msc` > *Server*, *Computer Browser* (required)
 + Firewall > exceptions > *File and Printer Sharing* > enable
 
 
-## Keys <a id="ks"></a>
+<a id="ks"></a>
+## Keys
 
 ### Windows Key + ...
 
@@ -224,17 +239,19 @@ keys | purpose |
 `Ctrl` + `Shift` + `ESC` | taskmanager |
 
 
-## Hosts <a id="hs"></a>
+<a id="hs"></a>
+## Hosts
 
         C:\windows\system32\drivers\etc\hosts
 
 Create shortcut:
 
-+ `notepad /A <path>`
++ *Run* > `notepad /A <path>`
 + `right click` > *Run as administrator*
 
 
-## .msc <a id="mc"></a>
+<a id="mc"></a>
+## .msc
 
 .msc | description |
 ---- | ---- |
@@ -261,37 +278,43 @@ Create shortcut:
 `firewall.cpl` | |
 
 
-## Passwords <a id="pw"></a>
+<a id="pw"></a>
+## Passwords
 
-        rundll32.exe keymgr.dll,KRShowKeyMgr
+*Run* > `rundll32.exe keymgr.dll,KRShowKeyMgr`
 
 
-## Power Configuration <a id="pc"></a>
+<a id="pc"></a>
+## Power Configuration
 
-`regedit`
+*Run* > `regedit`
 
         HKEY_CURRENT_USER\Control Panel\PowerCfg > CurrentPowerPolicy
             0  home office
             3  always on
             4  minimal management
 
-## Program Installation Folders <a id="pf"></a>
+<a id="pf"></a>
+## Program Installation Folders
 
 (theoretical, Windows often doesn't care)
 
         \Program Files (x86)\     x32
         \Program Files\           x64
 
-## sendto <a id="st"></a>
+
+<a id="st"></a>
+## sendto
 
      %APPDATA%\Microsoft\Windows\SendTo
 
 or
 
-`Run` > `shell:sendto`
+*Run* > `shell:sendto`
 
 
-## Servers <a id="sv"></a>
+<a id="sv"></a>
+## Servers
 
 + [WAMP](http://www.wampserver.com/en/)
     + x64, x32, multiple PHP versions
@@ -301,47 +324,52 @@ or
 
 ### IIS Conflict
 
-Kill IIS when it stops WAMP/XAMPP:
+Kill IIS when it stops WAMP / XAMPP:
 
 + Control Panel > Admin Tools > IIS Manager > stop
-+ `services.msc` > *Web Deployment Agent Service* > *manual start*
++ *Run* > `services.msc` > *Web Deployment Agent Service* > *manual start*
 
 
-## Services <a id="sc"></a>
+<a id="sc"></a>
+## Services
 
 + DCOM Server Process Launcher - defragging
 + Diagnostics Tracking Service - telemetry
 
 
-## Start Batch <a id="sb"></a>
+<a id="sb"></a>
+## Start Batch
 
-+ add program locations to *$PATH*
-
-*start.bat*
+1. *start.bat*
 
         @echo off
         start cherrytree.exe
         start firefox.exe
         exit
 
+2. add the program locations in *start.bat* to *$PATH*
 
-## Taskbar <a id="tb"></a>
+
+<a id="tb"></a>
+## Taskbar
 
 ### Thumbnail Preview Disable
 
-+ `gpedit.msc` > User Configuration > Administrative Templates > Start Menu and Taskbar > *Turn off taskbar thumbnails* > Disabled
++ *Run* > `gpedit.msc` > User Configuration > Administrative Templates > Start Menu and Taskbar > *Turn off taskbar thumbnails* > Disabled
 
 + `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` >
 new DWORD > ExtendedUIHoverTime > 30000
 
-*disabled in Creators update ...*
+*both disabled by Creators update ... sigh*
 
-## Telemetry <a id="tm"></a>
+
+<a id="tm"></a>
+## Telemetry
 
 ### Win 10
 
 + Start > Settings > Privacy
-    + disable as many as possible, especially 'inking'
+    + disable as many as possible, *especially* **Inking**
 
 #### Disable Services
 
@@ -356,7 +384,8 @@ new DWORD > ExtendedUIHoverTime > 30000
         reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
 
 
-## Updates <a id="ud"></a>
+<a id="ud"></a>
+## Updates
 
 ### Win 7 Bad Updates
 
@@ -376,12 +405,13 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 *Updates jammed / Updates Service disabled error*
 
-+ `services.msc` > stop *WindowsUpdate*
++ *Run* > `services.msc` > stop *WindowsUpdate*
 + `C:\Windows\` > rename `SoftwareDistribution` directory
-+ `services.msc` > start *WindowsUpdate*
++ *Run* > `services.msc` > start *WindowsUpdate*
 
 
-## Windows <a id="wd"></a>
+<a id="wd"></a>
+## Windows
 
 ### Unreachable Offscreen
 
@@ -392,7 +422,8 @@ new DWORD > ExtendedUIHoverTime > 30000
 + move mouse
 
 
-## Windows Explorer <a id="we"></a>
+<a id="we"></a>
+## Windows Explorer
 
 ### Kill + Reboot
 
