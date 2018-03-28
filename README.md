@@ -3,11 +3,11 @@
 
 #### Survival snippets for development on Windows.
 
-#### Developing on Windows? No!
+#### Developing on Windows?! *No!*
 
-Despite every body cell screaming when in the vicinity of the maligned OS these days, unfortunately I am sometimes forced by on-site work to use Windows.
+Despite every body cell screaming in the vicinity of the decadent OS, unfortunately I am sometimes forced by on-site work to use Windows.
 
-The following is a quick reference of mostly common tips to make Windows usage somewhat more bearable.
+The following is my quick reference to ease the pain of Windows.
 
 ----
 
@@ -44,15 +44,15 @@ The following is a quick reference of mostly common tips to make Windows usage s
 <a id="ad"></a>
 ## Active Directory
 
-Corporate environments love Active Directory (AD).  I don't.
+Corporate environments love Active Directory (AD). I don't.
 
-AD will probably silently harvest your files from *My Documents* and add them to some remote network server(s).
+AD will probably silently harvest files from *My Documents* and add them to some remote network server(s).
 
 For corporate PC roaming access you will probably want this, else you might not.
 
-If not, move your personal files out of *My Documents* to another location, such as `C:/mydocs`
+If not, move personal files out of *My Documents* to another location, such as `C:/mydocs`
 
--- which will then rely on your backup schedule, not AD's (not that I found AD's that consistent anyway).
+-- which will then rely on your backup schedule, not AD's (not that I found AD's consistent anyway).
 
 
 <a id="cu"></a>
@@ -190,9 +190,11 @@ Add standalone programs to `C:/<directory>`, and add this directory location to 
 <a id="ft"></a>
 ## File Transfer
 
-**The hard way:**
+**Easy Way**
 
-*(easier way: use local server upload, netcat, network storage, or online storage)*
++ local server upload, *netcat*, network storage, online storage ...
+
+**Hard Way**
 
 ### Win 7
 
