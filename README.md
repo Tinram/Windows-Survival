@@ -168,10 +168,12 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 + **[Git](https://git-scm.com/download/win)**
     + not just for *Git*, but for what ships with it:
         + *curl*
-        + *grep*
         + *gpg*
+        + *grep*
         + *md5sum*
+        + *openssl*
         + *shred*
+        + *ssh*
 
 + **[7-Zip](https://www.7-zip.org/)**
 + **[CherryTree](https://www.giuspen.com/cherrytree/)**
