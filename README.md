@@ -166,7 +166,7 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 <a id="ep"></a>
 ## Essential Programs
 
-+ **[Git](https://git-scm.com/download/win)**
++ [Git](https://git-scm.com/download/win)
     + not just for *Git*, but for what ships with it:
         + *curl*
         + *gpg*
@@ -176,14 +176,14 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
         + *shred*
         + *ssh*
 
-+ **[7-Zip](https://www.7-zip.org/)**
-+ **[CherryTree](https://www.giuspen.com/cherrytree/)**
-+ diff program (**CSDiff**, WinMerge etc)
-+ password vault (**[KeepassX](https://www.keepassx.org/downloads)**)
-+ PDF viewer (**[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader.html)**)
-+ **[ptime](http://pc-tools.net/win32/ptime/)**
-+ **[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)**
-+ **[WinSCP](https://winscp.net/eng/index.php)**
++ [7-Zip](https://www.7-zip.org/)
++ [CherryTree](https://www.giuspen.com/cherrytree/)
++ diff program ([CSDiff](http://www.componentsoftware.de/Products/CSDiff/download.htm), [WinMerge](http://winmerge.org/) etc)
++ password vault ([KeePassX](https://www.keepassx.org/downloads))
++ PDF viewer ([SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader.html))
++ [ptime](http://pc-tools.net/win32/ptime/)
++ [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
++ [WinSCP](https://winscp.net/eng/index.php)
 
 ### Standalone Programs
 
@@ -299,7 +299,7 @@ Create shortcut:
             3  always on
             4  minimal management
 
-<small>(Bugs usually prevent the above working.)<small>
+(Bugs usually prevent the above working.)
 
 <a id="pf"></a>
 ## Program Installation Folders
@@ -367,7 +367,7 @@ Kill IIS when it stops WAMP / XAMPP:
 + `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` >
 new DWORD > ExtendedUIHoverTime > 30000
 
-<small>Both disabled by Creators Update ... sigh.</small>
+(Both disabled by Creators Update ... sigh.)
 
 
 <a id="tm"></a>
