@@ -3,11 +3,12 @@
 
 #### Survival snippets for development on Windows.
 
-#### Developing on Windows?! *No!*
+#### *Developing on Windows?!*
 
-Despite every body cell screaming in the vicinity of the decadent OS, unfortunately I am sometimes forced by on-site work to use Windows.
+Despite bristling in the vicinity of the decadent OS, I am sometimes forced by on-site work to use Windows.
 
-The following is my quick reference to ease the pain of Windows.
+This is a quick reference to work around the pain of Windows world.
+
 
 ----
 
@@ -48,11 +49,11 @@ Corporate environments love Active Directory (AD). I don't.
 
 AD will probably silently harvest files from *My Documents* and add them to some remote network server(s).
 
-For corporate PC roaming access you will probably want this, else you might not.
+For corporate PC roaming access you might want this, else you really might not.
 
 If not, move personal files out of *My Documents* to another location, such as `C:/mydocs`
 
--- which will then rely on your backup schedule, not AD's (not that I found AD's consistent anyway).
+&ndash; which will then rely on your backup schedule, not AD's (not that I found AD's consistent anyway).
 
 
 <a id="cu"></a>
@@ -70,7 +71,7 @@ If not, move personal files out of *My Documents* to another location, such as `
 <a id="cl"></a>
 ## Command-Line
 
-For a usable terminal window on Windows < 10
+For a resized terminal window on Windows < 10
 
         mode con cols=140
 
@@ -298,6 +299,8 @@ Create shortcut:
             3  always on
             4  minimal management
 
+<small>(Bugs usually prevent the above working.)<small>
+
 <a id="pf"></a>
 ## Program Installation Folders
 
@@ -364,7 +367,7 @@ Kill IIS when it stops WAMP / XAMPP:
 + `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` >
 new DWORD > ExtendedUIHoverTime > 30000
 
-*both disabled by Creators update ... sigh*
+<small>Both disabled by Creators Update ... sigh.</small>
 
 
 <a id="tm"></a>
@@ -429,7 +432,7 @@ new DWORD > ExtendedUIHoverTime > 30000
 <a id="we"></a>
 ## Windows Explorer
 
-### Kill + Reboot
+### Kill and Reboot
 
         taskkill /f /im explorer.exe
         start explorer.exe
