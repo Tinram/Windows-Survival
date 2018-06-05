@@ -109,12 +109,14 @@ command | description | |
 `getmac` | MAC address | |
 `hostname` | | |
 `ipconfig` | IPs | |
+`more` | pager | |
 `mstsc` | RDP | |
 `net` | network info | |
 `netsh` | netshell | `netsh interface ip set address local dhcp` |
 `netstat` | network stats | `-a` all, `-b` exes, `-o` owner, `-p` TCP, `-r` routing, `-s` stats |
 `net use` | network connections | |
 `path` | search path | |
+`pathping` | network ping stats | |
 `ping` | | |
 `ren` | rename | |
 `route` | routing table | |
@@ -126,7 +128,7 @@ command | description | |
 `tree` | dirs | `tree /F /A` |
 `type` | view text file | |
 `where` | file locator | |
-`xcopy` | | |
+`xcopy` | file / dir copy | |
 
 
 <a id="dn"></a>
