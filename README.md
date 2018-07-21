@@ -438,3 +438,8 @@ new DWORD > ExtendedUIHoverTime > 30000
 
         taskkill /f /im explorer.exe
         start explorer.exe
+
+
+## License
+
+Licensed under the [MIT License](https://github.com/Tinram/Windows-Survival/blob/master/LICENSE).
