@@ -5,9 +5,9 @@
 
 #### *Developing on Windows?!*
 
-Despite bristling in the vicinity of the decadent OS, I am sometimes forced by on-site work to use Windows.
+Despite bristling in the vicinity of this wretched OS, I am sometimes forced by on-site work to use Windows.
 
-This is a quick reference to work around the pain of Windows world.
+This is a quick reference to work around some of the pain of Windows world.
 
 
 ----
@@ -301,12 +301,12 @@ Create shortcut:
             3  always on
             4  minimal management
 
-(Bugs usually prevent the above working.)
+(Win 7 Pro: bugs prevent the above working.)
 
 <a id="pf"></a>
 ## Program Installation Folders
 
-(theoretical, Windows often doesn't care)
+(theoretical, Windows doesn't usually care)
 
         \Program Files (x86)\     x32
         \Program Files\           x64
@@ -342,8 +342,8 @@ Kill IIS when it stops WAMP / XAMPP:
 <a id="sc"></a>
 ## Services
 
-+ DCOM Server Process Launcher - defragging
-+ Diagnostics Tracking Service - telemetry
++ DCOM Server Process Launcher: defragging
++ Diagnostics Tracking Service: telemetry
 
 
 <a id="sb"></a>
@@ -425,7 +425,7 @@ new DWORD > ExtendedUIHoverTime > 30000
 ### Unreachable Offscreen
 
 + `right click` window on taskbar, or select it and use `Alt` + `Space`
-+ if `Restore` option available, select it to pop window out of minimised/maximised state
++ if `Restore` option available, select it to get window out of minimised/maximised state
 + `Move`
 + cursor
 + move mouse
