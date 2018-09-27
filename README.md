@@ -5,9 +5,9 @@
 
 #### *Developing on Windows?!*
 
-Despite bristling in the vicinity of this wretched OS, I am sometimes forced by on-site work to use Windows.
+Despite hating so much of this wretched OS, I am sometimes forced to use it for on-site work.
 
-This is a quick reference to work around some of the pain of Windows world.
+This is a quick personal reference to work around some of the pain of Windows world.
 
 
 ----
@@ -47,9 +47,9 @@ This is a quick reference to work around some of the pain of Windows world.
 
 Corporate environments love Active Directory (AD). I don't.
 
-AD will probably silently harvest files from *My Documents* and add them to some remote network server(s).
+AD periodically copies files from *My Documents* and adds them to a remote network server(s).
 
-For corporate PC roaming access you might want this, else you really might not.
+For corporate PC roaming file access you might want this, else you probably won't.
 
 If not, move personal files out of *My Documents* to another location, such as `C:/mydocs`
 
@@ -147,8 +147,6 @@ command | description | |
 
 <a id="ed"></a>
 ## Editors
-
-*Not going there ...*
 
 Just don't use Windows Notepad, which has one level of undo and no recognition of non-`CRLF` line endings.  (Probably just fine on Windows 1.0 in 1985.)
 
@@ -369,7 +367,7 @@ Kill IIS when it stops WAMP / XAMPP:
 + `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` >
 new DWORD > ExtendedUIHoverTime > 30000
 
-(Both disabled by Creators Update ... sigh.)
+(Both disabled by Win 10 Creators Update ... sigh.)
 
 
 <a id="tm"></a>
