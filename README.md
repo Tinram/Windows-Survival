@@ -5,7 +5,7 @@
 
 #### *Developing on Windows?!*
 
-Despite hating so much of this wretched OS, I am sometimes forced to use it for on-site work.
+Despite detesting so much of this wretched OS, I am sometimes forced to use it for on-site work.
 
 This is a quick personal reference to work around some of the pain of Windows world.
 
@@ -127,6 +127,7 @@ command | description | |
 `tracert` | | |
 `tree` | dirs | `tree /F /A` |
 `type` | view text file | |
+`unzip` | | |
 `where` | file locator | |
 `xcopy` | file / dir copy | |
 
