@@ -73,20 +73,24 @@ If not, move personal files out of *My Documents* to another location, such as `
 
 For a resized terminal window on Windows < 10
 
-        mode con cols=140
+```batch
+    mode con cols=140
+```
 
 Change encoding:
 
-        chcp 650001        Unicode
-        chcp 1252          Latin 1
+```batch
+    chcp 650001        Unicode
+    chcp 1252          Latin 1
+```
 
 #### Open terminal in current folder:
 
-+ current directory (nothing selected) > `Shift` + `right click` > *Open command window here*
++ current directory (nothing selected) > <kbd>Shift</kbd> + <kbd>ight click</kbd> > *Open command window here*
 
 #### Registry hack:
 
-+ *Run* > `regedit`
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `regedit`
 + `HKEY_LOCAL_MACHINE\Software\Classes\Folder\Shell\`
 + create new key called `Command Prompt`
 + default value: `cmd`
@@ -139,11 +143,13 @@ command | description | |
 
 *p* = program
 
-        p > nul
-        p 2> nul             error to nul
-        p > nul 2>&1         error + out
-        p >f 2> nul          out to file, suppress error
-        (p) > f 2> nul       out to file, suppress cmd.exe error
+```batch
+    p > nul
+    p 2> nul             error to nul
+    p > nul 2>&1         error + out
+    p >f 2> nul          out to file, suppress error
+    (p) > f 2> nul       out to file, suppress cmd.exe error
+```
 
 
 <a id="ed"></a>
@@ -155,8 +161,9 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 <a id="df"></a>
 ## Diff Folders
 
-        ROBOCOPY cmp cmp2 /e /l /ns /njs /njh /ndl /fp /log:diff.txt
-
+```batch
+    ROBOCOPY cmp cmp2 /e /l /ns /njs /njh /ndl /fp /log:diff.txt
+```
 
 <a id="dm"></a>
 ## Drive Mapping
@@ -216,33 +223,33 @@ Add standalone programs to `C:/<directory>`, and add this directory location to 
 <a id="ks"></a>
 ## Keys
 
-### Windows Key + ...
+### <kbd>Windows</kbd> + ...
 
 keys | purpose |
 ---- | ---- |
-`Alt` + `PrtScrn` | screenshot of active window |
-`Break` | system properties |
-`E` | Explorer |
-`F3` | file search |
-`L` | lock |
-`M` | minimise windows |
-`P` | projector |
-`R` | run |
-`R` | > `Ctrl` + `Shift` + `Enter` = admin |
-`Shift` + `L-Alt` + `PrtScrn` | high contrast |
+<kbd>Alt</kbd> + <kbd>PrtScrn</kbd> | screenshot of active window |
+<kbd>Break</kbd> | system properties |
+<kbd>E</kbd> | Explorer |
+<kbd>F3</kbd> | file search |
+<kbd>L</kbd> | lock |
+<kbd>M</kbd> | minimise windows |
+<kbd>P</kbd> | projector |
+<kbd>R</kbd> | run |
+<kbd>R</kbd> | > <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> = admin |
+<kbd>Shift</kbd> + <kbd>L-Alt</kbd> + <kbd>PrtScrn</kbd> | high contrast |
 
 
 ### Others
 
 keys | purpose |
 ---- | ---- |
-`Shift` + `right click` | open terminal |
-`F2` | rename |
-`F3` | search |
-`F5` | refresh
-`Alt` + `TAB` | cycle windows |
-`Alt` + `Shift` + `TAB` | cycle backwards |
-`Ctrl` + `Shift` + `ESC` | taskmanager |
+<kbd>Shift</kbd> + <kbd>right click</kbd> | open terminal |
+<kbd>F2</kbd> | rename |
+<kbd>F3</kbd> | search |
+<kbd>F5</kbd> | refresh
+<kbd>Alt</kbd> + <kbd>TAB</kbd> | cycle windows |
+<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>TAB</kbd> | cycle backwards |
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>ESC</kbd> | taskmanager |
 
 
 <a id="hs"></a>
@@ -328,7 +335,7 @@ or
     + x64, x32, multiple PHP versions
 
 + [XAMPP](https://www.apachefriends.org/download.html)
-    + x32
+    + x32, ancient PHP versions available
 
 ### IIS Conflict
 
@@ -350,10 +357,12 @@ Kill IIS when it stops WAMP / XAMPP:
 
 1. *start.bat*
 
-        @echo off
-        start cherrytree.exe
-        start firefox.exe
-        exit
+```batch
+    @echo off
+    start cherrytree.exe
+    start firefox.exe
+    exit
+```
 
 2. add the program locations in *start.bat* to *$PATH*
 
@@ -365,7 +374,7 @@ Kill IIS when it stops WAMP / XAMPP:
 
 + *Run* > `gpedit.msc` > User Configuration > Administrative Templates > Start Menu and Taskbar > *Turn off taskbar thumbnails* > Disabled
 
-+ `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` >
++ `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
 new DWORD > ExtendedUIHoverTime > 30000
 
 (Both disabled by Win 10 Creators Update ... sigh.)
@@ -386,10 +395,12 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 #### Disable via Registry
 
-        sc delete DiagTrack
-        sc delete dmwappushservice
-        echo "" > C:\ProgramData\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
+```batch
+    sc delete DiagTrack
+    sc delete dmwappushservice
+    echo "" > C:\ProgramData\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl
+    reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
+```
 
 
 <a id="ud"></a>
@@ -397,15 +408,15 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 ### Win 7 Bad Updates
 
-+ disable Win 10 upgrade path:
+1. disable Win 10 upgrade path:
 
-        HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
-        DisableOSUpgrade > 1
++ `HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`
+DisableOSUpgrade > 1
 
-        HKLM\Software\Microsoft\Windows\CurrentVersion\WindowsUpdate\OSUpgrade
-        ReservationsAllowed > 0
++ `HKLM\Software\Microsoft\Windows\CurrentVersion\WindowsUpdate\OSUpgrade`
+ReservationsAllowed > 0
 
-+ *KB3133977*, March 2016
+2. *KB3133977*, March 2016
     + prevents booting, looks like hard drive failure
     + remedy: disable UEFI secure boot; OS Type > Other OS
 
@@ -423,7 +434,7 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 ### Unreachable Offscreen
 
-+ `right click` window on taskbar, or select it and use `Alt` + `Space`
++ `right click` window on taskbar, or select it and use <kbd>Alt</kbd> + <kbd>Space</kbd>
 + if `Restore` option available, select it to get window out of minimised/maximised state
 + `Move`
 + cursor
@@ -435,8 +446,10 @@ new DWORD > ExtendedUIHoverTime > 30000
 
 ### Kill and Reboot
 
-        taskkill /f /im explorer.exe
-        start explorer.exe
+```batch
+    taskkill /f /im explorer.exe
+    start explorer.exe
+```
 
 
 ## License
