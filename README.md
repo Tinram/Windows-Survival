@@ -86,7 +86,7 @@ Change encoding:
 
 #### Open terminal in current folder:
 
-+ current directory (nothing selected) > <kbd>Shift</kbd> + <kbd>ight click</kbd> > *Open command window here*
++ current directory (nothing selected) > <kbd>Shift</kbd> + <kbd>right click</kbd> > *Open command window here*
 
 #### Registry hack:
 
@@ -216,7 +216,7 @@ Add standalone programs to `C:/<directory>`, and add this directory location to 
 
 ### Win XP
 
-+ *Run* > `services.msc` > *Server*, *Computer Browser* (required)
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `services.msc` > *Server*, *Computer Browser* (required)
 + Firewall > exceptions > *File and Printer Sharing* > enable
 
 
@@ -235,7 +235,7 @@ keys | purpose |
 <kbd>M</kbd> | minimise windows |
 <kbd>P</kbd> | projector |
 <kbd>R</kbd> | run |
-<kbd>R</kbd> | > <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> = admin |
+<kbd>R</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> = admin |
 <kbd>Shift</kbd> + <kbd>L-Alt</kbd> + <kbd>PrtScrn</kbd> | high contrast |
 
 
@@ -259,8 +259,8 @@ keys | purpose |
 
 Create shortcut:
 
-+ *Run* > `notepad /A <path>`
-+ `right click` > *Run as administrator*
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `notepad /A <path>`
++ <kbd>right click</kbd> > *Run as administrator*
 
 
 <a id="mc"></a>
@@ -294,13 +294,13 @@ Create shortcut:
 <a id="pw"></a>
 ## Passwords
 
-*Run* > `rundll32.exe keymgr.dll,KRShowKeyMgr`
+<kbd>Windows</kbd> + <kbd>R</kbd> > `rundll32.exe keymgr.dll,KRShowKeyMgr`
 
 
 <a id="pc"></a>
 ## Power Configuration
 
-*Run* > `regedit`
+<kbd>Windows</kbd> + <kbd>R</kbd> > `regedit`
 
         HKEY_CURRENT_USER\Control Panel\PowerCfg > CurrentPowerPolicy
             0  home office
@@ -325,7 +325,7 @@ Create shortcut:
 
 or
 
-*Run* > `shell:sendto`
+<kbd>Windows</kbd> + <kbd>R</kbd> > `shell:sendto`
 
 
 <a id="sv"></a>
@@ -342,7 +342,7 @@ or
 Kill IIS when it stops WAMP / XAMPP:
 
 + Control Panel > Admin Tools > IIS Manager > stop
-+ *Run* > `services.msc` > *Web Deployment Agent Service* > *manual start*
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `services.msc` > *Web Deployment Agent Service* > *manual start*
 
 
 <a id="sc"></a>
@@ -372,7 +372,7 @@ Kill IIS when it stops WAMP / XAMPP:
 
 ### Thumbnail Preview Disable
 
-+ *Run* > `gpedit.msc` > User Configuration > Administrative Templates > Start Menu and Taskbar > *Turn off taskbar thumbnails* > Disabled
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `gpedit.msc` > User Configuration > Administrative Templates > Start Menu and Taskbar > *Turn off taskbar thumbnails* > Disabled
 
 + `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
 new DWORD > ExtendedUIHoverTime > 30000
@@ -424,9 +424,9 @@ ReservationsAllowed > 0
 
 *Updates jammed / Updates Service disabled error*
 
-+ *Run* > `services.msc` > stop *WindowsUpdate*
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `services.msc` > stop *WindowsUpdate*
 + `C:\Windows\` > rename `SoftwareDistribution` directory
-+ *Run* > `services.msc` > start *WindowsUpdate*
++ <kbd>Windows</kbd> + <kbd>R</kbd> > `services.msc` > start *WindowsUpdate*
 
 
 <a id="wd"></a>
