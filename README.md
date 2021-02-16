@@ -168,7 +168,7 @@ Just don't use Windows Notepad, which has one level of undo and no recognition o
 <a id="dm"></a>
 ## Drive Mapping
 
-        \\10.0.0.147
+    \\10.0.0.147
 
 
 <a id="ep"></a>
@@ -203,7 +203,13 @@ Add standalone programs to `C:/<directory>`, and add this directory location to 
 
 **Easy Way**
 
-+ local server upload, *netcat*, network storage, online storage ...
+### Win 10
+
++ *ssh*, *scp*
+
+### Win 7
+
++ local server upload, *netcat*, *WinSCP*, network storage, online storage ...
 
 **Hard Way**
 
@@ -255,7 +261,7 @@ keys | purpose |
 <a id="hs"></a>
 ## Hosts
 
-        C:\windows\system32\drivers\etc\hosts
+    C:\windows\system32\drivers\etc\hosts
 
 Create shortcut:
 
@@ -302,10 +308,10 @@ Create shortcut:
 
 <kbd>Windows</kbd> + <kbd>R</kbd> > `regedit`
 
-        HKEY_CURRENT_USER\Control Panel\PowerCfg > CurrentPowerPolicy
-            0  home office
-            3  always on
-            4  minimal management
+    HKEY_CURRENT_USER\Control Panel\PowerCfg > CurrentPowerPolicy
+        0  home office
+        3  always on
+        4  minimal management
 
 (Win 7 Pro: bugs prevent the above working.)
 
@@ -314,14 +320,14 @@ Create shortcut:
 
 (theoretical, Windows doesn't usually care)
 
-        \Program Files (x86)\     x32
-        \Program Files\           x64
+    \Program Files (x86)\     x32
+    \Program Files\           x64
 
 
 <a id="st"></a>
 ## sendto
 
-     %APPDATA%\Microsoft\Windows\SendTo
+    %APPDATA%\Microsoft\Windows\SendTo
 
 or
 
